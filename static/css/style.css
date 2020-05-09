@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Source Code Pro', monospace;
+  background: rgba(42, 50, 75, 0.8);
+  height: 100vh;
+}
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+.block {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  animation: block 8s infinite alternate;
+}
+.block-text {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px 10px;
+  background: #2a324b;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bold-text {
+  font-weight: 700;
+}
+.ide {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50vh;
+}
+.ide .container {
+  padding: 5px 10px 5px 40px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  background: #2a324b;
+  height: auto;
+  border: 1px solid #2a324b;
+}
+.ide-line-counter {
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  width: 30px;
+  text-align: center;
+  background: #3c486c;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  color: #4f5e8c;
+}
+.ide-tab {
+  border: 1px solid #2a324b;
+  position: absolute;
+  bottom: 100%;
+  left: -1px;
+  color: #fff;
+  padding: 8px 40px 8px 30px;
+  background: #3c486c url(../img/css-icon.svg) no-repeat 6px center / 16px;
+  font-size: 14px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.ide-tab::after {
+  content: '⨯';
+  color: #fff;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.ide-text {
+  overflow: hidden;
+  font-size: 16px;
+  margin: 0;
+  line-height: 24px;
+  color: #D8985F;
+}
+.ide-text-background {
+  animation: background 8s infinite alternate;
+}
+.ide-text-border {
+  animation: border 8s infinite alternate;
+}
+.ide-text-border-radius {
+  animation: border-radius 8s infinite alternate;
+}
+.white-text {
+  color: #ccc;
+}
+.orange-text {
+  color: #D8985F;
+}
+.indent {
+  padding-left: 24px;
+}
+.property {
+  color: #E06C75;
+}
+.value {
+  color: #2BBAC5;
+}
+.classname {
+  color: #89CA78;
+}
+@keyframes block {
+  0% {
+    background: #fff;
+    border: 0 solid #fff;
+    border-radius: 0;
+  }
+  20% {
+    background: #fff;
+    border: 0 solid #fff;
+    border-radius: 0;
+  }
+  32% {
+    background: #89CA78;
+    border: 0 solid #fff;
+    border-radius: 0;
+  }
+  44% {
+    background: #89CA78;
+    border: 0 solid #fff;
+    border-radius: 0;
+  }
+  56% {
+    background: #89CA78;
+    border: 4px solid #fff;
+    border-radius: 0;
+  }
+  68% {
+    background: #89CA78;
+    border: 4px solid #fff;
+    border-radius: 0;
+  }
+  80% {
+    background: #89CA78;
+    border: 4px solid #fff;
+    border-radius: 50%;
+  }
+  100% {
+    background: #89CA78;
+    border: 4px solid #fff;
+    border-radius: 50%;
+  }
+}
+@keyframes background {
+  0% {
+    max-height: 0;
+  }
+  20% {
+    max-height: 0;
+  }
+  32% {
+    max-height: 30px;
+  }
+  44% {
+    max-height: 30px;
+  }
+  100% {
+    max-height: 30px;
+  }
+}
+@keyframes border {
+  0% {
+    max-height: 0;
+  }
+  44% {
+    max-height: 0;
+  }
+  56% {
+    max-height: 30px;
+  }
+  68% {
+    max-height: 30px;
+  }
+  100% {
+    max-height: 30px;
+  }
+}
+@keyframes border-radius {
+  0% {
+    max-height: 0;
+  }
+  68% {
+    max-height: 0;
+  }
+  80% {
+    max-height: 30px;
+  }
+  100% {
+    max-height: 30px;
+  }
+}
